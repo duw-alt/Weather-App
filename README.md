@@ -1,1 +1,1 @@
-Hosted here: https://duw-alt.github.io/Weather-App/
+Hosted here: https://checkmyweatherapp.netlify.app/
