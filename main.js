@@ -13,8 +13,11 @@ async function getWeather(city){
 
   if (response.status == 404){
     document.querySelector('.error').style.display = 'block';
+    document.querySelector('.error').classList.add('fadeIn');
     document.querySelector('.weather').style.display = 'none';
   } else {
+
+    document.querySelector('.error').classList.remove('fadeIn')
 
     if (data.weather[0].main === 'Clear') {
       weatherIcon.src = 'images/clear.png';
@@ -42,6 +45,8 @@ async function getWeather(city){
     
     document.querySelector('.weather').style.display = 'block';
     document.querySelector('.error').style.display = 'none';
+    
+    document.querySelector('.weather').classList.add('fadeIn');
 
     console.log(data)
   }
@@ -56,5 +61,7 @@ searchBar.addEventListener('keypress', (e) => {
     getWeather(searchBar.value);
   }
 });
+
+
 
 
